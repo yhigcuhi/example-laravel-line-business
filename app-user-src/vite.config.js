@@ -10,4 +10,8 @@ export default defineConfig({
         }),
         react(),
     ],
+    // localhost:{WEB port}で起動しているdocker で laravel viteの5173ポートへフォワードするため
+    server: {
+        host: true
+    },
 });

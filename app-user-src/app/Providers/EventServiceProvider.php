@@ -18,6 +18,11 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        // Socialite コールバック用
+        \SocialiteProviders\Manager\SocialiteWasCalled::class => [
+            // LINEログイン用
+            \SocialiteProviders\Line\LineExtendSocialite::class.'@handle',
+        ],
     ];
 
     /**

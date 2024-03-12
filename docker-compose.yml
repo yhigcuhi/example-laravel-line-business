@@ -58,6 +58,10 @@ services:
       - DB_DATABASE=${DB_DATABASE:-sample_db}
       - DB_USERNAME=${DB_USERNAME:-user}
       - DB_PASSWORD=${DB_PASSWORD:-zaq12wsx}
+      # LINEログイン用
+      - LINE_CLIENT_ID=${LINE_CLIENT_ID}
+      - LINE_CLIENT_SECRET=${LINE_CLIENT_SECRET}
+      - LINE_REDIRECT_URI=${LINE_REDIRECT_URI}
   # エンドユーザー向け WEB
   web-user:
     # 管理コンテナ名
